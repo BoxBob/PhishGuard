@@ -1,0 +1,19 @@
+# Python Environment
+venv/
+__pycache__/
+*.pyc
+
+# Machine Learning Models
+models/*.pkl
+
+# Massive Datasets
+data/raw/*.csv
+data/processed/*.csv
+
+# API Keys and Secrets
+.env
+
+# React/Node
+frontend/node_modules/
+frontend/dist/
+.DS_Store
