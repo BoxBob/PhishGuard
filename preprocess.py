@@ -40,7 +40,9 @@ if __name__ == "__main__":
     phishtank_df = load_phishtank('data/raw/phishtank.csv')
     urlhaus_df = load_urlhaus('data/raw/urlhaus.csv')
     tranco_df = load_tranco('data/raw/tranco.csv')
-    iscx_df = load_iscx('data/raw/iscx.csv')
+    # ISCX-URL2016 (All.csv) ships pre-extracted features with no raw URL column,
+    # so it can't be merged into this raw-URL pipeline; it's trained as a separate
+    # benchmark model instead (see train_iscx_benchmark.py).
 
     print("Merging Datasets...")
     combined_df = pd.concat([phishtank_df, urlhaus_df, tranco_df], ignore_index = True)

@@ -114,7 +114,7 @@ class URLForensicsEngine:
         api_url = "https://urlhaus-api.abuse.ch/v1/url/"
         data = {'url' : url}
         try:
-            response = response.post(api_url, data = data, timeout = 5)
+            response = requests.post(api_url, data = data, timeout = 5)
             if response.status_code == 200:
                 result = response.json()
                 if result['query_status'] == 'ok':
